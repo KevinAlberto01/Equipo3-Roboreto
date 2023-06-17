@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<launch>
+
+    <!-- VIDEO SOURCE -->
+    <include file="$(find puzzlebot_autostart)/launch/puzzlebot_autostart.launch">
+    </include>
+	
+    <node name="camera" pkg="seguidor" type="camera.py" output="screen"/>
+
+
+    <rosparam file = "$(find seguidor)/config/path_params.yaml" command = "load"  />
+    <node name="control" pkg="seguidor" type="control.py" output="screen"/>
+    <node name="circle_detection" pkg="seguidor" type="circle_detection.py" output="screen"/>
+    <node name="line_follower" pkg="seguidor" type="test.py" output="screen"/>
+
+</launch>
