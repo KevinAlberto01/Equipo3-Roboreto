@@ -1,0 +1,20 @@
+names:
+- Forward
+- GiveWay
+- Right
+- Roundabout
+- Stop
+- construction
+- green
+- left
+- yellow
+nc: 9
+roboflow:
+  license: CC BY 4.0
+  project: traffic-signals-puzzlebot
+  url: https://universe.roboflow.com/serviciosocialworkspace/traffic-signals-puzzlebot/dataset/5
+  version: 5
+  workspace: serviciosocialworkspace
+test: ../test/images
+train: Traffic-signals-Puzzlebot-5/train/images
+val: Traffic-signals-Puzzlebot-5/valid/images
